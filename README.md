@@ -1,2 +1,3 @@
-# Inane_Codes
-Just some random codes I end of copying from Stack Overflow :P... (just kidding)
+# Why are you even here .-.
+
+This is literally just a code dumping site. I just program the most basic crap and put it here because... Fuck why am I here...
