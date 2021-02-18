@@ -1,0 +1,23 @@
+'Task: A town has a bus service where passengers under the age of 12 and over the age of 60 do not need to pay for a fare. Write a program for this.'
+
+        'Declarations:'
+        Dim Age As Integer
+        Dim FreeFares As Boolean
+        Dim Cost As Single
+
+        'Initialisation:'
+        Age = 0
+        FreeFares = False
+        Cost = 0.0
+
+        Console.Write("Enter your age: ")
+        Age = Console.ReadLine
+        If Age <= 12 Or Age >= 60 Then
+            FreeFares = True
+            Console.WriteLine("You have a free ride!")
+        Else
+            Cost = Age / 10
+            Console.WriteLine("You have to pay " & Cost & " dollars.")
+        End If
+
+        Console.ReadKey
