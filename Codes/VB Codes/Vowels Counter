@@ -1,0 +1,34 @@
+'Task: Find the count of vowels in an entered string.' 
+
+        'Declarations:'
+        Dim Sentence As String
+        Dim Character As Char
+        Dim NumberOfVowels As Integer
+        Dim Count As Integer
+
+        'Initialisation:'
+        Sentence = ""
+        Character = ""
+        NumberOfVowels = 0
+
+        Console.Write("Enter the sentence (in lower case): ")
+        Sentence = Console.ReadLine
+        Sentence = Lcase(Sentence)
+
+        For Count = 1 To Len(Sentence)
+            Character = Mid(Sentence, Count, Len(Sentence))
+            If Character = "a" Then
+                NumberOfVowels = NumberOfVowels + 1
+            ElseIf Character = "e" Then
+                NumberOfVowels = NumberOfVowels + 1
+            ElseIf Character = "i" Then
+                NumberOfVowels = NumberOfVowels + 1
+            ElseIf Character = "o" Then
+                NumberOfVowels = NumberOfVowels + 1
+            ElseIf Character = "u" Then
+                NumberOfVowels = NumberOfVowels + 1
+            End If
+        Next
+
+        Console.WriteLine("Your sentence has " & NumberOfVowels & " vowels!")
+        Console.ReadLine()
