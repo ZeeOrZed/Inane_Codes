@@ -1,0 +1,37 @@
+'Task: An Isogram is a word that has no repeating letters, consecutive or not. Create a funtion that takes a string and returns either TRUE or FALSE, depending on whether or not it's an "isogram".'
+
+        'Declarations:'
+        Dim Count1 As Integer
+        Dim Count2 As Integer
+        Dim Counter As Integer
+        Dim Word As String
+        Dim LetterChecker As Char
+        Dim IsogramChecker As Boolean
+
+        'Initialisation:'
+        Count1 = 1
+        Count2 = 1
+        Counter = 1
+        Word = " "
+        LetterChecker = " "
+        IsogramChecker = True
+
+        Console.Write("Enter a word:")
+        Word = Console.ReadLine
+        Word = LCase(Word)
+
+        For Counter = 1 To Len(Word)
+            If IsogramChecker = True Then
+                For Count1 = 1 To Len(Word)
+                    LetterChecker = Mid(Word, Count1, 1)
+                    For Count2 = Count1 + 1 To Len(Word)
+                        If LetterChecker = Mid(Word, Count2, 1) Then
+                            IsogramChecker = False
+                        End If
+                    Next
+                Next
+            End If
+        Next
+
+        Console.WriteLine("Your word isn't an Isogram: " & IsogramChecker)
+        Console.ReadKey
